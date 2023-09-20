@@ -1,0 +1,118 @@
+@import './lib';
+
+.home__header {
+    padding: 4.28rem 9.14rem 2.142rem 9.14rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    @include flexbox(space-between, center);
+}
+
+.home__logo {
+    font-size: 2.57rem;
+    font-family: $font-clash-display-bold;
+
+    span {
+        color: $primary-color;
+        font-family: inherit;
+    }
+}
+
+.home__navigation_wrapper {
+    @include flexbox(flex-end, center);
+    gap: 8.64rem;
+}
+
+.home__navigation {
+    @include flexbox(space-between, center);
+    gap: 4rem;
+    list-style: none;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.home__main_section {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.home__main_section[data-index=one] {
+    padding: 2.2rem 0 0 9.14rem;
+}
+
+.home__main__overviewCtaSum {
+    font-size: 2.57rem;
+    font-family: $font-montserrat-bold;
+}
+
+.home__main__overviewCtaSumWrapper {
+    @include flexbox(flex-end, flex-end);
+    flex-direction: column;
+    padding-right: 3.92rem;
+}
+
+.home__image_boy {
+    --width: 59.14rem;
+    --height: 51.07rem;
+
+    width: var(--width);
+    height: var(--height);
+
+    @media screen and (min-width:1440px) {
+        width: calc(var(--width) - 9rem);
+        height: calc(var(--height) - 9rem);
+    }
+}
+
+.home__main__overview {
+    @include flexbox(space-between, flex-start);
+    border: 1px solid black;
+    margin-top: 1.92rem;
+}
+
+.home__main__overviewCta {
+    font-size: 5.71rem;
+    font-family: $font-clash-display-bold;
+    line-height: normal;
+}
+
+.home__main__overviewDesc {
+    font-family: $font-montserrat-regular;
+    font-size: 1.42rem;
+    color: white;
+    line-height: 166%;
+}
+
+.home__main__overviewImages {}
+
+.home__main__overviewInfo {
+    min-width: fit-content;
+}
+
+.home__main__overviewTimer {
+    margin-top: 5.5rem;
+    @include flexbox(flex-start, center);
+    gap: 2.5rem;
+    line-height: 6.08rem;
+
+    &>div span:first-child {
+        font-size: 4.57rem;
+        font-family: $font-unica-one-regular;
+    }
+
+    &>div span:last-child {
+        font-size: 1rem;
+    }
+}
+
+.home__main__overviewItem {
+    @extend .home__main_section;
+    @include flexbox(space-between, center);
+    padding: 4.28rem 9.14rem 2.142rem 9.14rem;
+}
+
+.home__main__overviewItem[data-reversed] {
+    flex-direction: row-reverse;
+}
+
+.home__main__overviewItem_ilstr {}

@@ -1,0 +1,79 @@
+/**
+    * Static font's for pixel perfect look
+**/
+
+// montserrat
+@font-face {
+    font-family: 'montserrat-regular';
+    src: url("../assets//fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'montserrat-medium';
+    src: url("../assets//fonts/Montserrat-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'montserrat-semibold';
+    src: url("../assets//fonts/Montserrat-SemiBold.ttf") format("truetype");
+}
+
+// clash display
+@font-face {
+    font-family: 'montserrat-bold';
+    src: url("../assets//fonts/Montserrat-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'clash-display-regular';
+    src: url("../assets//fonts/ClashDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'clash-display-medium';
+    src: url("../assets//fonts/ClashDisplay-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'clash-display-semibold';
+    src: url("../assets//fonts/ClashDisplay-Semibold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'clash-display-bold';
+    src: url("../assets//fonts/ClashDisplay-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'unica-one-regular';
+    src: url("../assets//fonts/UnicaOne-Regular.ttf") format("truetype");
+}
+
+// Montserrat Fonts
+$font-montserrat-regular: 'montserrat-regular', sans-serif;
+$font-montserrat-medium: 'montserrat-medium', sans-serif;
+$font-montserrat-semibold: 'montserrat-semibold', sans-serif;
+$font-montserrat-bold: 'montserrat-bold', sans-serif;
+
+// Clash Display Fonts
+$font-clash-display-regular: 'clash-display-regular', sans-serif;
+$font-clash-display-medium: 'clash-display-medium', sans-serif;
+$font-clash-display-semibold: 'clash-display-semibold', sans-serif;
+$font-clash-display-bold: 'clash-display-bold', sans-serif;
+
+// Unica One Fonts 
+$font-unica-one-regular: 'unica-one-regular', cursive;
+
+
+
+
+$primary-color: #D434FE;
+$secondary-color: #FF26B9;
+$tertiary-color: #150E28;
+
+
+@mixin flexbox($Justify-content, $align-items) {
+    display: flex;
+    justify-content: $Justify-content;
+    align-items: $align-items;
+}
