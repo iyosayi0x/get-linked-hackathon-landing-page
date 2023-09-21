@@ -3,7 +3,8 @@
 
 
 .timeline__wrapper {
-    padding: 5.142rem 0;
+    padding: 5.14rem 0 17rem 0;
+    min-height: fit-content;
 }
 
 .timeline__header {
@@ -61,7 +62,6 @@
 .timeline__timeline_date {
     position: absolute;
     bottom: -4rem;
-    right: -23.24rem;
     font-size: 1.71rem;
     color: $primary-color;
     font-family: $font-montserrat-bold;
@@ -70,18 +70,35 @@
 .timeline__timeline_metaInfoWrapper {
     position: absolute;
     bottom: -100%;
-    right: 7.5rem;
     text-align: right;
 }
 
 
 .timeline__timeline[data-reversed=true] {
+
     .timeline__timeline_date {
         right: 7.5rem;
     }
 
     .timeline__timeline_metaInfoWrapper {
-        right: -46.5rem;
+        right: -100%;
         text-align: left;
+        width: fit-content;
+        width: calc(100% - 7.5rem);
+    }
+}
+
+.timeline__timeline[data-reversed=false] {
+    .timeline__timeline_date {
+        right: -100%;
+        text-align: right;
+        width: calc(100% - 7.5rem);
+        text-align: left;
+    }
+
+    .timeline__timeline_metaInfoWrapper {
+        right: 7.5rem;
+        text-align: right;
+        top: 100%;
     }
 }

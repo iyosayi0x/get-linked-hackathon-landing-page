@@ -1,0 +1,101 @@
+@import './lib';
+
+
+.prizes {
+    @include flexbox(center, center);
+    background-blend-mode: color-burn;
+    object-fit: cover;
+    gap: 2.142rem;
+    background: url('../assets/images/bg1.png'), #150E28 0px -0.093px / 100% 109.967% no-repeat;
+    background-blend-mode: color-burn;
+    padding: 5.28rem 0 10.64rem 0;
+}
+
+.prizes__awardWrapper {
+    img {
+        width: 39.14rem;
+        height: 34.42rem;
+    }
+}
+
+.prizes__header {
+    font-size: 2.28rem;
+    font-family: $font-clash-display-bold;
+    line-height: normal;
+
+    div {
+        font-family: inherit;
+    }
+}
+
+.prizes__description {
+    font-size: 1.14rem;
+    margin-top: 1.14rem;
+}
+
+.prizes__prize__reward {
+    font-size: 2.28rem;
+    font-family: $font-montserrat-bold;
+}
+
+.prizes__prize {
+    width: fit-content;
+    @include flexbox(center, center);
+    flex-direction: column;
+    width: 15.14rem;
+    border: 1px solid red;
+    margin-top: 11.8rem;
+    border-radius: .5rem;
+    border: 1px solid #D434FE;
+    background: rgba(212, 52, 254, 0.12);
+    padding-bottom: 2.35rem;
+
+    img {
+        width: 12.78rem;
+        height: 12.85rem;
+        margin-top: -50%;
+    }
+
+    .prizes__prize__reward {
+        color: $primary-color;
+    }
+}
+
+.prizes__prize[data-large] {
+    border-radius: .5rem;
+    border: 1px solid #903AFF;
+    background: rgba(144, 58, 255, 0.12);
+    padding-bottom: 1.5rem;
+
+    img {
+        width: 21.14rem;
+        height: 21.14rem;
+        margin-top: -70%;
+    }
+
+    .prizes__prize__reward {
+        color: #903AFF;
+    }
+}
+
+.prizes__prizes {
+    @include flexbox(flex-start, center);
+    gap: 2.14rem;
+}
+
+.prizes__prize_titleWrapper {
+    margin-top: 1.071rem;
+    text-align: center;
+
+    &>div:first-child {
+        font-size: 2.57rem;
+        font-family: $font-montserrat-bold;
+        line-height: 5.56rem;
+    }
+
+    &>div:last-child {
+        font-family: $font-montserrat-semibold;
+        font-size: 1.71rem;
+        margin-top: -1.14rem;
+    }
+}

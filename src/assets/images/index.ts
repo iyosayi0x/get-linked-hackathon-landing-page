@@ -1,4 +1,5 @@
 export default {
+    award: new URL('./award.png', import.meta.url).href,
     big_idea: new URL('./big-idea.png', import.meta.url).href,
     boy: new URL('./boy.png', import.meta.url).href,
     boom: new URL('./boom.png', import.meta.url).href,
@@ -8,4 +9,15 @@ export default {
     man: new URL('./man.png', import.meta.url).href,
     woman: new URL('./woman.png', import.meta.url).href,
     worker: new URL('./worker.png', import.meta.url).href,
+    first: new URL('./first.png', import.meta.url).href,
+    second: new URL('./second.png', import.meta.url).href,
+    third: new URL('./third.png', import.meta.url).href,
+    sponsor_liberty: new URL('./sponsor_liberty.png', import.meta.url).href,
+    sponsor_liberty_pay: new URL('./sponsor_liberty_pay.png', import.meta.url)
+        .href,
+    sponsor_paybox: new URL('./sponsor_paybox.png', import.meta.url).href,
+    sponsor_plus: new URL('./sponsor_plus.png', import.meta.url).href,
+    sponsor_whisper: new URL('./sponsor_whisper.png', import.meta.url).href,
+    sponsor_winwise: new URL('./sponsor_winwise.png', import.meta.url).href,
+    security: new URL('./secure.png', import.meta.url).href,
 };

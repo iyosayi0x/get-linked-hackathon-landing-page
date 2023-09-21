@@ -6,6 +6,10 @@ import Overview from 'src/assets/components/Overview';
 import Intro from 'src/assets/components/Intro';
 import Timeline from 'src/assets/components/Timeline';
 import Header from 'src/assets/components/Header';
+import Prizes from 'src/assets/components/Prizes';
+import Sponsors from 'src/assets/components/Sponsors';
+import Privacy from 'src/assets/components/Privacy';
+import Footer from 'src/assets/components/Footer';
 
 const Home = () => {
     return (
@@ -20,6 +24,10 @@ const Home = () => {
                 <Judging />
                 <Faq />
                 <Timeline />
+                <Prizes />
+                <Sponsors />
+                <Privacy />
+                <Footer />
             </main>
         </div>
     );

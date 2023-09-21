@@ -1,0 +1,13 @@
+@import './lib';
+
+.footer {
+    background: #100B20;
+    padding: 5rem 16rem 3.8rem 16rem;
+    @include flexbox(space-between, center);
+    flex-direction: column;
+
+}
+
+.footer__navigation {
+    @include flexbox(space-between, center);
+}

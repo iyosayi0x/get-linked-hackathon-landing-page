@@ -1,0 +1,70 @@
+@import './lib';
+
+.sponsor {
+    @include flexbox(center, center);
+    flex-direction: column;
+    padding: 8.14rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.sponsor__title {
+    font-size: 2.28rem;
+    font-family: $font-montserrat-bold;
+}
+
+.sponsor__desc {
+    text-align: center;
+    margin-top: 1.57rem;
+    line-height: 1.96rem;
+}
+
+.sponsor__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    min-height: 15rem;
+    border: 1px solid $primary-color;
+    margin-top: 4.6rem;
+    border-radius: .35rem;
+    padding: 10.28rem 12.78rem;
+    gap: 3rem;
+
+    .sponsor__wrapper {
+        // border: 4px solid $primary-color;
+        @include flexbox(center, center);
+        padding: 1.83rem;
+        position: relative;
+
+        &:first-child::before,
+        &:nth-child(2)::before,
+        &:nth-child(4)::before,
+        &:nth-child(5)::before {
+            content: "";
+            height: 100%;
+            width: 4px;
+            background: $primary-color;
+            position: absolute;
+            right: -1.7rem;
+            top: 0;
+            bottom: 0;
+        }
+
+        &:first-child::after,
+        &:nth-child(2)::after,
+        &:nth-child(3)::after {
+            content: "";
+            height: 4px;
+            width: 100%;
+            background: $primary-color;
+            position: absolute;
+            bottom: -1.7rem;
+            left: 0;
+            right: 0;
+        }
+
+        &:nth-child(2) {
+            padding-left: 3.5rem;
+            padding-right: 3.5rem;
+        }
+    }
+}

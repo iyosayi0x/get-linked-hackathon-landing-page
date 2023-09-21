@@ -1,0 +1,6 @@
+@import './lib';
+
+.security {
+    @include flexbox(space-between, center);
+    padding: 5.57rem 7.42rem 11.5rem 13.35rem;
+}
