@@ -64,3 +64,10 @@ button {
 [data-color=primary] {
     color: $primary-color;
 }
+
+.active-link-btn {
+    border: 2px solid transparent;
+    border-image: linear-gradient(hsla(269, 100%, 61%, 1), hsla(320, 100%, 58%, 1));
+    border-image-slice: 1;
+    background: transparent;
+}

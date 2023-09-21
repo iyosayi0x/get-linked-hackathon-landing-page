@@ -1,0 +1,18 @@
+@import './lib';
+
+.faq__wrapper {
+    margin-top: 4.85rem;
+}
+
+.faq {
+    @include flexbox(space-between, center);
+    border-bottom: 1px solid $primary-color;
+    padding-bottom: .92rem;
+    margin-bottom: 1.78rem;
+}
+
+.faq__expand {
+    font-size: 20px;
+    color: $primary-color;
+    cursor: pointer;
+}

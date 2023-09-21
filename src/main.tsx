@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import Home from 'src/pages';
 import Contract from 'src/pages/contact';
+import Register from 'src/pages/register';
 
 import 'src/styles/global.scss';
 
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
     {
         path: '/contact',
         element: <Contract />,
+    },
+    {
+        path: '/register',
+        element: <Register />,
     },
 ]);
 

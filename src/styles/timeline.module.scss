@@ -1,0 +1,86 @@
+@import './lib';
+
+
+
+.timeline__wrapper {
+    padding: 5.142rem 0;
+}
+
+.timeline__header {
+    @include flexbox(center, center);
+    flex-direction: column;
+}
+
+.timeline__header_cta {
+    font-size: 2.28rem;
+    font-family: $font-clash-display-bold;
+}
+
+.timeline__timelines {
+    margin-top: 6.5rem;
+    flex-direction: column;
+}
+
+.timeline__timeline {
+    &::before {
+        content: attr(data-index);
+        position: absolute;
+        right: -1.89rem;
+        bottom: -4.56rem;
+        width: 3.78rem;
+        height: 3.78rem;
+        border-radius: 50%;
+        background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
+        @include flexbox(center, center);
+        font-size: 1.71rem;
+        font-family: $font-montserrat-bold;
+    }
+
+    min-height: 8rem;
+    width: 50%;
+    border-right:4px solid $primary-color;
+    margin-top:5.56rem;
+    position: relative;
+}
+
+.timeline__timeline_title {
+    font-size: 1.71rem;
+    font-family: $font-montserrat-bold;
+    color: $primary-color;
+    max-width: 40rem;
+}
+
+.timeline__timeline_desc {
+    font-size: 1rem;
+    max-width: 40rem;
+    line-height: 1.93rem;
+    margin-top: 0.85rem;
+    font-size: 1.142rem;
+}
+
+.timeline__timeline_date {
+    position: absolute;
+    bottom: -4rem;
+    right: -23.24rem;
+    font-size: 1.71rem;
+    color: $primary-color;
+    font-family: $font-montserrat-bold;
+}
+
+.timeline__timeline_metaInfoWrapper {
+    position: absolute;
+    bottom: -100%;
+    right: 7.5rem;
+}
+
+
+.timeline__timeline[data-reversed=true] {
+    .timeline__timeline_date {
+        right: 7.5rem;
+    }
+
+    .timeline__timeline_metaInfoWrapper {
+        right: -46.5rem;
+        text-align: left;
+    }
+}
