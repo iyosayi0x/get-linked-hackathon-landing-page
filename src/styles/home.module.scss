@@ -11,9 +11,13 @@
     font-size: 2.57rem;
     font-family: $font-clash-display-bold;
 
+    a,
     span {
-        color: $primary-color;
         font-family: inherit;
+    }
+
+    span {
+        color: $primary-color
     }
 }
 

@@ -7,20 +7,26 @@ const Privacy = () => {
     return (
         <div className={styles.security}>
             <section>
-                <div>
+                <div className={styles.security__header}>
                     <div>Privacy Policy and</div>
-                    <div>Terms</div>
+                    <div data-color="primary">Terms</div>
                 </div>
 
-                <div>Last updated on September 12, 2023</div>
+                <div className={styles.security__date}>
+                    Last updated on September 12, 2023
+                </div>
 
-                <div>
+                <div style={{ lineHeight: '188.4%' }}>
                     Below are our privacy & policy, which outline a lot of
-                    goodies. it's our aim to always take of our participant
+                    goodies.
+                    <br /> it's our aim to always take of our participant
                 </div>
 
-                <div>
-                    <div>
+                <div className={styles.security__boxWrapper}>
+                    <div
+                        className={styles.security__description}
+                        style={{ lineHeight: '216.4%' }}
+                    >
                         At getlinked tech Hackathon 1.0, we value your privacy
                         and are committed to protecting your personal
                         information. This Privacy Policy outlines how we
@@ -30,10 +36,14 @@ const Privacy = () => {
                         described in this policy.
                     </div>
 
-                    <div>Licensing Policy</div>
+                    <div className={styles.security__policyHeader}>
+                        Licensing Policy
+                    </div>
 
-                    <div>Here are terms of our Standard License:</div>
-                    <ul>
+                    <div className={styles.security__listHeader}>
+                        Here are terms of our Standard License:
+                    </div>
+                    <ul className={styles.security__list}>
                         <li>
                             The Standard License grants you a non-exclusive
                             right to navigate and register for our event
@@ -44,7 +54,7 @@ const Privacy = () => {
                         </li>
                     </ul>
 
-                    <div>
+                    <div style={{ display: 'grid', placeItems: 'center' }}>
                         <Link to="/register">
                             <button>Register</button>
                         </Link>

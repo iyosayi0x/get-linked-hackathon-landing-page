@@ -28,7 +28,9 @@ const Header = () => {
     return (
         <header className={styles.home__header}>
             <div className={styles.home__logo}>
-                get<span>linked</span>
+                <Link to="/">
+                    get<span>linked</span>
+                </Link>
             </div>
 
             <nav className={styles.home__navigation_wrapper}>

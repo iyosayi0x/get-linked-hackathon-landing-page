@@ -3,4 +3,58 @@
 .security {
     @include flexbox(space-between, center);
     padding: 5.57rem 7.42rem 11.5rem 13.35rem;
+    gap: 4.92rem;
+}
+
+.security__header {
+    font-size: 2.28rem;
+    font-family: $font-clash-display-bold;
+
+    div {
+        font-family: inherit;
+    }
+}
+
+.security__date {
+    color: rgba(255, 255, 255, 0.75);
+    margin: 1.21rem 0 2.14rem 0;
+}
+
+.security__boxWrapper {
+    margin-top: 4.92rem;
+    border-radius: 0.35rem;
+    border: 1px solid $primary-color;
+    background: rgba(217, 217, 217, 0.03);
+    padding: 4.21rem 5.14rem;
+}
+
+.security__policyHeader {
+    color: $primary-color;
+    font-family: $font-montserrat-bold;
+    font-size: 1.14rem;
+    margin: 1.71rem 0 0 0;
+    line-height: 216.4%;
+}
+
+.security__listHeader {
+    font-family: $font-montserrat-bold;
+    line-height: 216.4%;
+    margin-top: -0.214rem;
+}
+
+.security__list {
+    margin-top: 1.28rem;
+
+    &>li {
+        margin-bottom: 1.28rem;
+        line-height: 216.4%;
+        color: #fff;
+        position: relative;
+
+        &:before {
+            content: url('../assets/svg/check-green.svg');
+            margin-left: -1rem;
+            margin-right: 1rem;
+        }
+    }
 }
