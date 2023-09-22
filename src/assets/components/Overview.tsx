@@ -7,9 +7,12 @@ const Overview = () => {
         <>
             <section
                 className={styles.home__main__overviewItem}
-                style={{ paddingLeft: '16.42rem', gap: '7.7rem' }}
+                style={{ gap: '7.7rem' }}
             >
-                <div className={styles.home__main__overviewItem_ilstr}>
+                <div
+                    className={styles.home__main__overviewItem_ilstr}
+                    data-ilstr="big-idea"
+                >
                     <img
                         src={images.big_idea}
                         alt="big-idea"
@@ -48,7 +51,10 @@ const Overview = () => {
                 data-reversed
                 style={{ gap: '3.42rem' }}
             >
-                <div className={styles.home__main__overviewItem_ilstr}>
+                <div
+                    className={styles.home__main__overviewItem_ilstr}
+                    data-ilstr="woman"
+                >
                     <img
                         src={images.woman}
                         alt="woman"

@@ -1,4 +1,3 @@
-import React from 'react';
 import Modal from 'src/assets/components/modals';
 import images from 'src/assets/images';
 

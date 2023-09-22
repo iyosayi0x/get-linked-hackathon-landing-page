@@ -38,7 +38,7 @@ const Intro = () => {
                         </div>
                     </div>
 
-                    <div style={{ marginTop: '2.12rem' }}>
+                    <div className={styles.home__main__overviewButtonWrapper}>
                         <button>Register</button>
                     </div>
 

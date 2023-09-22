@@ -9,12 +9,21 @@
     background: url('../assets/images/bg1.png'), #150E28 0px -0.093px / 100% 109.967% no-repeat;
     background-blend-mode: color-burn;
     padding: 5.28rem 0 10.64rem 0;
+
+    @media screen and (max-width:1000px) {
+        flex-direction: column;
+    }
 }
 
 .prizes__awardWrapper {
     img {
         width: 39.14rem;
         height: 34.42rem;
+
+        @media screen and (max-width:1000px) {
+            width: 100%;
+            height: auto;
+        }
     }
 }
 
@@ -33,9 +42,14 @@
     margin-top: 1.14rem;
 }
 
+
 .prizes__prize__reward {
     font-size: 2.28rem;
     font-family: $font-montserrat-bold;
+
+    @media screen and (max-width:1000px) {
+        font-size: 1rem !important;
+    }
 }
 
 .prizes__prize {
@@ -43,7 +57,6 @@
     @include flexbox(center, center);
     flex-direction: column;
     width: 15.14rem;
-    border: 1px solid red;
     margin-top: 11.8rem;
     border-radius: .5rem;
     border: 1px solid #D434FE;
@@ -59,6 +72,17 @@
     .prizes__prize__reward {
         color: $primary-color;
     }
+
+    @media screen and (max-width:1000px) {
+        img {
+            width: 5.42rem;
+            height: 5.45rem;
+            margin-top: -20%;
+        }
+
+        flex: 1;
+        width: unset;
+    }
 }
 
 .prizes__prize[data-large] {
@@ -71,6 +95,12 @@
         width: 21.14rem;
         height: 21.14rem;
         margin-top: -70%;
+
+        @media screen and (max-width:1000px) {
+            width: 8.97rem;
+            height: 8.97rem;
+            margin-top: -40%;
+        }
     }
 
     .prizes__prize__reward {
@@ -97,5 +127,15 @@
         font-family: $font-montserrat-semibold;
         font-size: 1.71rem;
         margin-top: -1.14rem;
+    }
+
+    @media screen and (max-width:1000px) {
+        &>div:first-child {
+            font-size: 1rem;
+        }
+
+        &>div:last-child {
+            font-size: 1rem;
+        }
     }
 }

@@ -20,10 +20,13 @@ const Faq = () => {
             style={{ paddingLeft: '4.71rem', gap: '1.17rem' }}
             data-reversed
         >
-            <div className={styles.home__main__overviewItem_ilstr}>
+            <div
+                className={styles.home__main__overviewItem_ilstr}
+                data-ilstr="man"
+            >
                 <img
                     src={images.man}
-                    alt="worker"
+                    alt="man"
                     style={{ width: '52.98rem', height: '57.5ren' }}
                 />
             </div>

@@ -8,7 +8,10 @@ const Judging = () => {
             className={styles.home__main__overviewItem}
             style={{ paddingLeft: '4.71rem', gap: '3.78rem' }}
         >
-            <div className={styles.home__main__overviewItem_ilstr}>
+            <div
+                className={styles.home__main__overviewItem_ilstr}
+                data-ilstr="worker"
+            >
                 <img
                     src={images.worker}
                     alt="worker"

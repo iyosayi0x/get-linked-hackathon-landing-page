@@ -26,47 +26,56 @@ const Header = ({ showBorder }: { showBorder?: boolean }) => {
         ];
     }, []);
     return (
-        <header
-            className={styles.home__header}
-            style={showBorder === false ? { borderBottom: 'None' } : {}}
-        >
-            <div className={styles.home__logo}>
-                <Link to="/">
-                    get<span>linked</span>
-                </Link>
-            </div>
+        <>
+            <div className="desktop-only">
+                <header
+                    className={`${styles.home__header}`}
+                    style={showBorder === false ? { borderBottom: 'None' } : {}}
+                >
+                    <div className={styles.home__logo}>
+                        <Link to="/">
+                            get<span>linked</span>
+                        </Link>
+                    </div>
 
-            <nav className={styles.home__navigation_wrapper}>
-                <ul className={styles.home__navigation}>
-                    {navigation.map((navPath) => (
-                        <li key={navPath.href}>
-                            <NavLink
-                                to={navPath.href}
-                                className={({ isActive }) =>
-                                    isActive && !navPath.href.includes('#')
-                                        ? styles.home__navigation_active
+                    <nav className={styles.home__navigation_wrapper}>
+                        <ul className={styles.home__navigation}>
+                            {navigation.map((navPath) => (
+                                <li key={navPath.href}>
+                                    <NavLink
+                                        to={navPath.href}
+                                        className={({ isActive }) =>
+                                            isActive &&
+                                            !navPath.href.includes('#')
+                                                ? styles.home__navigation_active
+                                                : ''
+                                        }
+                                    >
+                                        {navPath.name}
+                                    </NavLink>
+                                </li>
+                            ))}
+                        </ul>
+
+                        <Link to="/register">
+                            <button
+                                className={
+                                    location.pathname === '/register'
+                                        ? 'active-link-btn'
                                         : ''
                                 }
                             >
-                                {navPath.name}
-                            </NavLink>
-                        </li>
-                    ))}
-                </ul>
+                                Register
+                            </button>
+                        </Link>
+                    </nav>
+                </header>
+            </div>
 
-                <Link to="/register">
-                    <button
-                        className={
-                            location.pathname === '/register'
-                                ? 'active-link-btn'
-                                : ''
-                        }
-                    >
-                        Register
-                    </button>
-                </Link>
-            </nav>
-        </header>
+            <div className="mobile-only">
+                <header className={`${styles.home__header_mobile}`}></header>
+            </div>
+        </>
     );
 };
 

@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import styles from 'src/styles/prizes.module.scss';
 
 import images from '../images';
@@ -18,7 +18,7 @@ const Prizes = () => {
             },
             {
                 reward: 150_000,
-                title: '1st',
+                title: '3rd',
                 image: images.third,
             },
         ];
@@ -54,7 +54,11 @@ const Prizes = () => {
                                     }
                                 >
                                     <div>{prize.title}</div>
-                                    <div>Runner</div>
+                                    <div
+                                        className={styles.prizes__prize__label}
+                                    >
+                                        Runner
+                                    </div>
                                 </div>
                                 <div className={styles.prizes__prize__reward}>
                                     {prize.reward}

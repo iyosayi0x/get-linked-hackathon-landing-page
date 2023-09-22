@@ -4,6 +4,11 @@
     @include flexbox(center, center);
     padding: 5.57rem 7.42rem 11.5rem 13.35rem;
     gap: 4.92rem;
+
+    @media screen and (max-width:1000px) {
+        flex-direction: column;
+        padding: 5.57rem 1rem 11.5rem 1rem;
+    }
 }
 
 .security__header {
@@ -27,6 +32,7 @@
     background: rgba(217, 217, 217, 0.03);
     padding: 4.21rem 5.14rem;
     max-width: 40.64rem;
+    width: 100vw;
 }
 
 .security__policyHeader {
@@ -56,6 +62,14 @@
             content: url('../assets/svg/check-green.svg');
             margin-left: -1rem;
             margin-right: 1rem;
+        }
+    }
+}
+
+.security__ilstrWrapper {
+    @media screen and (max-width:1000px) {
+        img {
+            width: 100%;
         }
     }
 }

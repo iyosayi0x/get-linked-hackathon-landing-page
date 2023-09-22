@@ -62,7 +62,7 @@ const Privacy = () => {
                 </div>
             </section>
 
-            <section>
+            <section className={styles.security__ilstrWrapper}>
                 <img src={images.security} alt="security" />
             </section>
         </div>

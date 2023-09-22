@@ -1,5 +1,3 @@
-import React from 'react';
-
 import styles from 'src/styles/sponsor.module.scss';
 import images from '../images';
 

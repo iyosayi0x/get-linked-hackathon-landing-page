@@ -1,10 +1,12 @@
 @import './lib';
 
-
-
 .timeline__wrapper {
     padding: 5.14rem 0 17rem 0;
     min-height: fit-content;
+
+    @media screen and (max-width:1000px) {
+        padding: 5.14rem 0 17rem 3.8rem;
+    }
 }
 
 .timeline__header {
@@ -23,6 +25,15 @@
 }
 
 .timeline__timeline {
+
+    border-right: 4px solid $primary-color;
+
+    min-height: 8rem;
+    width: 50%;
+    margin-top: 5.56rem;
+    position: relative;
+
+
     &::before {
         content: attr(data-index);
         position: absolute;
@@ -35,13 +46,30 @@
         @include flexbox(center, center);
         font-size: 1.71rem;
         font-family: $font-montserrat-bold;
+
     }
 
-    min-height: 8rem;
-    width: 50%;
-    border-right:4px solid $primary-color;
-    margin-top:5.56rem;
-    position: relative;
+
+    @media screen and (max-width:1000px) {
+        &::before {
+            right: unset;
+            left: -0.69rem;
+            width: 1.38rem;
+            height: 1.38rem;
+            font-size: 0.85rem;
+            bottom: -1.38rem;
+        }
+
+        border-right: unset;
+        border-left: 4px solid $primary-color;
+        padding-left: 1rem;
+
+        min-height: fit-content;
+
+    }
+
+
+
 }
 
 .timeline__timeline_title {
@@ -59,46 +87,50 @@
     font-size: 1.142rem;
 }
 
-.timeline__timeline_date {
-    position: absolute;
-    bottom: -4rem;
-    font-size: 1.71rem;
-    color: $primary-color;
-    font-family: $font-montserrat-bold;
-}
 
-.timeline__timeline_metaInfoWrapper {
-    position: absolute;
-    bottom: -100%;
-    text-align: right;
-}
-
-
-.timeline__timeline[data-reversed=true] {
-
+@media screen and (min-width:1000px) {
     .timeline__timeline_date {
-        right: 7.5rem;
+        position: absolute;
+        bottom: -4rem;
+        font-size: 1.71rem;
+        color: $primary-color;
+        font-family: $font-montserrat-bold;
     }
 
     .timeline__timeline_metaInfoWrapper {
-        right: -100%;
-        text-align: left;
-        width: fit-content;
-        width: calc(100% - 7.5rem);
-    }
-}
-
-.timeline__timeline[data-reversed=false] {
-    .timeline__timeline_date {
-        right: -100%;
+        position: absolute;
+        bottom: -100%;
         text-align: right;
-        width: calc(100% - 7.5rem);
-        text-align: left;
+
     }
 
-    .timeline__timeline_metaInfoWrapper {
-        right: 7.5rem;
-        text-align: right;
-        top: 100%;
+
+    .timeline__timeline[data-reversed=true] {
+
+        .timeline__timeline_date {
+            right: 7.5rem;
+
+        }
+
+        .timeline__timeline_metaInfoWrapper {
+            right: -100%;
+            text-align: left;
+            width: calc(100% - 7.5rem);
+        }
+    }
+
+    .timeline__timeline[data-reversed=false] {
+        .timeline__timeline_date {
+            right: -100%;
+            text-align: right;
+            width: calc(100% - 7.5rem);
+            text-align: left;
+        }
+
+        .timeline__timeline_metaInfoWrapper {
+            right: 7.5rem;
+            text-align: right;
+            top: 100%;
+        }
     }
 }

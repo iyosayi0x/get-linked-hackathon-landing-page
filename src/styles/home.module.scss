@@ -4,6 +4,10 @@
     padding: 4.28rem 9.14rem 2.142rem 9.14rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     @include flexbox(space-between, center);
+
+    @media screen and (max-width:1000px) {
+        padding: 4.28rem 1rem 2.142rem 1rem;
+    }
 }
 
 
@@ -51,17 +55,31 @@
 
 .home__main_section[data-index=one] {
     padding: 2.2rem 0 0 9.14rem;
+
+    @media screen and (max-width:1000px) {
+        padding: 2.2rem 0 0 1rem;
+    }
 }
 
 .home__main__overviewCtaSum {
     font-size: 2.57rem;
     font-family: $font-montserrat-bold;
+
+    @media screen and (max-width:1000px) {
+        font-size: 1.14rem;
+    }
 }
 
 .home__main__overviewCtaSumWrapper {
     @include flexbox(flex-end, flex-end);
     flex-direction: column;
     padding-right: 3.92rem;
+
+    @media screen and (max-width:1000px) {
+        padding: 0;
+        justify-content: center;
+        width: 100%;
+    }
 }
 
 .home__image_boy {
@@ -69,18 +87,31 @@
     --height: 51.78rem;
     width: var(--width);
     height: var(--height);
+
+    @media screen and (max-width:1000px) {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .home__main__overview {
     @include flexbox(center, flex-start);
-    border: 1px solid black;
     margin-top: 1.92rem;
+
+    @media screen and (max-width:1000px) {
+        flex-direction: column;
+    }
 }
 
 .home__main__overviewCta {
     font-size: 5.71rem;
     font-family: $font-clash-display-bold;
     line-height: normal;
+
+    @media screen and (max-width:1000px) {
+        font-size: 2.28rem;
+        text-align: center;
+    }
 }
 
 .home__main__overviewDesc {
@@ -88,6 +119,19 @@
     font-size: 1.42rem;
     color: white;
     line-height: 166%;
+
+    @media screen and (max-width:1000px) {
+        font-size: 0.92rem;
+        text-align: center;
+    }
+}
+
+.home__main__overviewButtonWrapper {
+    margin-top: 2.12rem;
+
+    @media screen and (max-width:1000px) {
+        @include flexbox(center, center);
+    }
 }
 
 .home__main__overviewInfo {
@@ -109,16 +153,29 @@
     &>div span:last-child {
         font-size: 1rem;
     }
+
+    @media screen and (max-width:1000px) {
+        @include flexbox(center, flex-start);
+        gap: 1rem;
+    }
 }
 
 .home__main__overviewItem {
     @extend .home__main_section;
     @include flexbox(center, center);
     padding: 4.28rem 9.14rem 2.142rem 9.14rem;
+
+    @media screen and (max-width:1000px) {
+        flex-direction: column;
+    }
 }
 
 .home__main__overviewItem[data-reversed] {
     flex-direction: row-reverse;
+
+    @media screen and (max-width:1000px) {
+        flex-direction: column;
+    }
 }
 
 
@@ -140,4 +197,15 @@
 
 .home__main_overviewItem_metaData_description[data-bold] {
     font-family: $font-montserrat-bold;
+}
+
+.home__main__overviewItem_ilstr {
+
+    @media screen and (max-width:1000px) {
+
+        img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    }
 }
