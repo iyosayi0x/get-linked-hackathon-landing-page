@@ -1,7 +1,7 @@
 @import './lib';
 
 .security {
-    @include flexbox(space-between, center);
+    @include flexbox(center, center);
     padding: 5.57rem 7.42rem 11.5rem 13.35rem;
     gap: 4.92rem;
 }
@@ -26,6 +26,7 @@
     border: 1px solid $primary-color;
     background: rgba(217, 217, 217, 0.03);
     padding: 4.21rem 5.14rem;
+    max-width: 40.64rem;
 }
 
 .security__policyHeader {

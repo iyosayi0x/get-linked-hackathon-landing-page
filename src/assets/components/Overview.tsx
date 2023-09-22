@@ -30,6 +30,7 @@ const Overview = () => {
                         className={
                             styles.home__main_overviewItem_metaData_description
                         }
+                        style={{ maxWidth: '47rem' }}
                     >
                         Our tech hackathon is a melting pot of visionaries, and
                         its purpose is as clear as day: to shape the future.
@@ -68,6 +69,7 @@ const Overview = () => {
                         className={
                             styles.home__main_overviewItem_metaData_description
                         }
+                        style={{ maxWidth: '47rem' }}
                     >
                         Our tech hackathon is a melting pot of visionaries, and
                         its purpose is as clear as day: to shape the future.

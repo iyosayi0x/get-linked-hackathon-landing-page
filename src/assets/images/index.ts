@@ -20,4 +20,7 @@ export default {
     sponsor_whisper: new URL('./sponsor_whisper.png', import.meta.url).href,
     sponsor_winwise: new URL('./sponsor_winwise.png', import.meta.url).href,
     security: new URL('./secure.png', import.meta.url).href,
+    gdesigner: new URL('./gdesigner.png', import.meta.url).href,
+    girl: new URL('./girl.png', import.meta.url).href,
+    boy2: new URL('./boy2.png', import.meta.url).href,
 };

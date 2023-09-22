@@ -18,6 +18,12 @@
     src: url("../assets//fonts/Montserrat-SemiBold.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: 'montserrat-italic';
+    src: url("../assets//fonts/Montserrat-Italic.ttf") format("truetype");
+}
+
+
 // clash display
 @font-face {
     font-family: 'montserrat-bold';
@@ -54,6 +60,7 @@ $font-montserrat-regular: 'montserrat-regular', sans-serif;
 $font-montserrat-medium: 'montserrat-medium', sans-serif;
 $font-montserrat-semibold: 'montserrat-semibold', sans-serif;
 $font-montserrat-bold: 'montserrat-bold', sans-serif;
+$font-montserrat-italic: 'montserrat-italic', sans-serif;
 
 // Clash Display Fonts
 $font-clash-display-regular: 'clash-display-regular', sans-serif;

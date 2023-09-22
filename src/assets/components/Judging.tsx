@@ -16,7 +16,10 @@ const Judging = () => {
                 />
             </div>
 
-            <div className={styles.home__main__overviewItem__metaData}>
+            <div
+                className={styles.home__main__overviewItem__metaData}
+                style={{ maxWidth: '40.28rem' }}
+            >
                 <div
                     className={styles.home__main__overviewItem_metaData_header}
                 >

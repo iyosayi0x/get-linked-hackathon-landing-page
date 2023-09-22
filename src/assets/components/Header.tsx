@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 
 import styles from 'src/styles/home.module.scss';
 
-const Header = () => {
+const Header = ({ showBorder }: { showBorder?: boolean }) => {
     const location = useLocation();
     const navigation = useMemo(() => {
         return [
@@ -26,7 +26,10 @@ const Header = () => {
         ];
     }, []);
     return (
-        <header className={styles.home__header}>
+        <header
+            className={styles.home__header}
+            style={showBorder === false ? { borderBottom: 'None' } : {}}
+        >
             <div className={styles.home__logo}>
                 <Link to="/">
                     get<span>linked</span>

@@ -1,0 +1,32 @@
+@import './lib';
+
+
+.form__input {
+    border: 1px solid white;
+    width: 100%;
+    background: none;
+    padding: 1rem 1.42rem;
+    border-radius: 0.28rem;
+    outline: none;
+    font-family: $font-montserrat-regular;
+    font-size: 1.14rem;
+}
+
+.form__field {
+    margin-bottom: 2.78rem;
+}
+
+.form__dualFormField {
+    @include flexbox(space-between, center);
+    width: 100%;
+    gap: 2.28rem;
+    margin-bottom: 2.07rem;
+
+    &>div {
+        flex: .5;
+    }
+}
+
+.form__labelWrapper {
+    margin-bottom: 0.81rem;
+}

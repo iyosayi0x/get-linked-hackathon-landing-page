@@ -65,15 +65,14 @@
 }
 
 .home__image_boy {
-    --width: 59.78rem;
+    --width: 59.14rem;
     --height: 51.78rem;
-
     width: var(--width);
     height: var(--height);
 }
 
 .home__main__overview {
-    @include flexbox(space-between, flex-start);
+    @include flexbox(center, flex-start);
     border: 1px solid black;
     margin-top: 1.92rem;
 }
@@ -114,7 +113,7 @@
 
 .home__main__overviewItem {
     @extend .home__main_section;
-    @include flexbox(space-between, center);
+    @include flexbox(center, center);
     padding: 4.28rem 9.14rem 2.142rem 9.14rem;
 }
 
