@@ -79,6 +79,11 @@
         padding: 0;
         justify-content: center;
         width: 100%;
+
+        svg {
+            width: 9rem;
+            height: auto;
+        }
     }
 }
 
@@ -137,6 +142,10 @@
 .home__main__overviewInfo {
     min-width: fit-content;
     margin-top: 6rem;
+
+    @media screen and (max-width:1000px) {
+        margin: 1.5rem auto 1rem auto;
+    }
 }
 
 .home__main__overviewTimer {
