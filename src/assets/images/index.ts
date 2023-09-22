@@ -23,4 +23,6 @@ export default {
     gdesigner: new URL('./gdesigner.png', import.meta.url).href,
     girl: new URL('./girl.png', import.meta.url).href,
     boy2: new URL('./boy2.png', import.meta.url).href,
+    congrats: new URL('./congrats.png', import.meta.url).href,
+    wink: new URL('./wink.png', import.meta.url).href,
 };

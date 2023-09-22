@@ -1,0 +1,105 @@
+@import './lib';
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 100vh;
+    @include flexbox(center, flex-start);
+    z-index: 100000;
+}
+
+.modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(21, 14, 40, 0.93);
+    opacity: 0.7;
+    backdrop-filter: blur(100px);
+}
+
+.modal__contentContainer {
+    height: 100%;
+    max-height: 100%;
+    padding-bottom: 4rem;
+}
+
+.modal__contentContainer__scrollable {
+    @extend .modal__contentContainer;
+    overflow-y: auto;
+}
+
+/* Style the scrollbar for WebKit-based browsers */
+.modal__contentContainer::-webkit-scrollbar {
+    width: 0.5em;
+    /* Set the width of the scrollbar */
+}
+
+.modal__contentContainer::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    /* Set the background color of the scrollbar track */
+}
+
+.modal__contentContainer::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Set the color of the scrollbar thumb */
+}
+
+.modal__contentContainer::-webkit-scrollbar {
+    display: none;
+    /* Hide the scrollbar for WebKit-based browsers */
+}
+
+/* Style the scrollbar for Internet Explorer */
+.modal__contentContainer::-ms-scrollbar {
+    width: 0.5em;
+    /* Set the width of the scrollbar */
+}
+
+.modal__contentContainer::-ms-scrollbar-thumb {
+    background-color: #888;
+    /* Set the color of the scrollbar thumb */
+}
+
+.modal__content {
+    max-width: 50rem;
+    min-width: 38rem;
+    min-height: 20rem;
+    border-radius: 0.35rem;
+    border: 1px solid $primary-color;
+    background: rgba(255, 255, 255, 0.01);
+    max-width: 95vw;
+    padding: 5rem 2rem;
+    border-radius: 0.33rem;
+    z-index: 60;
+    margin-top: 7.14rem;
+    position: relative;
+
+    @media screen and (max-width: 1000px) {
+        min-width: unset;
+        margin: 7.14rem auto 0 auto;
+    }
+}
+
+.modal__info {
+    font-size: 2.28rem;
+    font-family: $font-montserrat-semibold;
+    text-align: center;
+}
+
+.modal__desc {
+    text-align: center;
+    margin-top: 1.05rem;
+}
+
+.modal__button {
+    margin-top: 2.3rem;
+
+    button {
+        width: 100%;
+    }
+}
