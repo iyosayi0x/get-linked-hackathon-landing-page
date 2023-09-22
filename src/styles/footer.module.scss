@@ -5,9 +5,74 @@
     padding: 5rem 16rem 3.8rem 16rem;
     @include flexbox(space-between, center);
     flex-direction: column;
+
+    @media screen and (max-width:1000px) {
+        padding: 5rem 4.85rem 3.8rem 4.85rem;
+    }
 }
 
 .footer__navigation {
     @include flexbox(space-between, flex-start);
-    gap: 20rem;
+    gap: 5rem;
+    width: 100%;
+
+    @media screen and (max-width:1000px) {
+        flex-direction: column;
+    }
+}
+
+.footer__header {
+    font-family: $font-clash-display-bold;
+    font-size: 2.14rem;
+
+    span {
+        font-family: inherit;
+    }
+}
+
+.footer__use {
+    @include flexbox(flex-start, center);
+    gap: 1rem;
+    margin-top: 5.28rem;
+    font-size: 0.85rem;
+    line-height: 174.2%;
+
+    &>a:first-child {
+        border-right: 2px solid $primary-color;
+        padding-right: 1rem;
+    }
+
+}
+
+.footer__listHeader {
+    color: $primary-color;
+    white-space: nowrap;
+    line-height: 174.2%;
+    font-family: $font-montserrat-bold;
+    margin-bottom: 0.43rem;
+    margin-top: 1rem;
+}
+
+.footer__item {
+    white-space: nowrap;
+}
+
+.footer__socials {
+    @include flexbox(space-between, center);
+    gap: 1.14rem;
+
+    &>div:first-child {
+        color: $primary-color;
+    }
+}
+
+.footer__link {
+    font-size: 0.85rem;
+    margin-bottom: 0.85rem;
+}
+
+.footer__contact_item {
+    @include flexbox(flex-start, center);
+    gap: 1.14rem;
+    margin-bottom: 1.57rem;
 }
