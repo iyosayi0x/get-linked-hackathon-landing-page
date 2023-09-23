@@ -40,7 +40,7 @@ const Intro = () => {
                     </div>
 
                     <div className={styles.home__main__overviewButtonWrapper}>
-                        <Link to='/register'>
+                        <Link to="/register">
                             <button>Register</button>
                         </Link>
                     </div>

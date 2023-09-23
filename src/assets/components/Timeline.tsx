@@ -43,9 +43,7 @@ const Timeline = () => {
                 <div className={timelineStyles.timeline__header_cta}>
                     Timeline
                 </div>
-                <div
-                    className={timelineStyles.timeline__desc}
-                >
+                <div className={timelineStyles.timeline__desc}>
                     Here is the breakdown of the time we anticipate <br />
                     using for the upcoming event.
                 </div>
