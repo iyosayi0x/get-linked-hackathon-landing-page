@@ -5,7 +5,13 @@ import formStyles from 'src/styles/form.module.scss';
 
 import images from 'src/assets/images';
 import Success from 'src/assets/components/modals/Success';
-import { BaseSyntheticEvent, useEffect, useMemo, useState } from 'react';
+import {
+    BaseSyntheticEvent,
+    useEffect,
+    useMemo,
+    useRef,
+    useState,
+} from 'react';
 import ChevronDown from 'src/assets/icons/chevron-down';
 import { handleFetchCategoryList, handleRegister } from 'src/adapters/register';
 
@@ -17,13 +23,20 @@ const Register = () => {
         return Array.from(Array(11).keys());
     }, []);
     const [isLoading, setIsLoading] = useState(false);
+    const groupSizeRef = useRef<HTMLDivElement | null>(null);
+    const categoryRef = useRef<HTMLDivElement | null>(null);
 
-    const [form, setForm] = useState<RegisterArguments>({
+    const [form, setForm] = useState<
+        Omit<RegisterArguments, 'category'> & { category: Category }
+    >({
         team_name: '',
         phone_number: '',
         email: '',
         project_topic: '',
-        category: 0,
+        category: {
+            name: '',
+            id: 0,
+        },
         group_size: 0,
         privacy_poclicy_accepted: false,
     });
@@ -46,13 +59,13 @@ const Register = () => {
             !form.email ||
             !form.phone_number ||
             !form.project_topic ||
-            form.category === 0 ||
+            form.category.id === 0 ||
             form.group_size === 0
         )
             return;
         try {
             setIsLoading(true);
-            await handleRegister(form);
+            await handleRegister({ ...form, category: form.category.id });
         } catch (err) {
             /// do something
         } finally {
@@ -175,8 +188,9 @@ const Register = () => {
                                         placeholder="category"
                                         readOnly={true}
                                         value={
-                                            form.category ||
-                                            'Select your category'
+                                            form.category.id === 0
+                                                ? 'Select your category'
+                                                : form.category.name
                                         }
                                     />
                                     <ChevronDown />
@@ -194,6 +208,13 @@ const Register = () => {
                                                 className={
                                                     formStyles.form__dropdownItem
                                                 }
+                                                onClick={() => {
+                                                    setForm((currForm) => ({
+                                                        ...currForm,
+                                                        category,
+                                                    }));
+                                                    categoryRef.current?.blur();
+                                                }}
                                             >
                                                 {' '}
                                                 {category.name}{' '}
@@ -225,6 +246,7 @@ const Register = () => {
                                             formStyles.form__dropdownWrapper
                                         }
                                         tabIndex={0}
+                                        ref={groupSizeRef}
                                     >
                                         {groupSizes.map((groupSize) => (
                                             <div
@@ -232,6 +254,13 @@ const Register = () => {
                                                 className={
                                                     formStyles.form__dropdownItem
                                                 }
+                                                onClick={() => {
+                                                    setForm((currForm) => ({
+                                                        ...currForm,
+                                                        group_size: groupSize,
+                                                    }));
+                                                    groupSizeRef.current?.blur();
+                                                }}
                                             >
                                                 {' '}
                                                 {groupSize}{' '}
@@ -267,7 +296,9 @@ const Register = () => {
                         </div>
 
                         <div style={{ display: 'grid', placeItems: 'center' }}>
-                            <button>{isLoading ? 'Loading...' : "Register Now"}</button>
+                            <button>
+                                {isLoading ? 'Loading...' : 'Register Now'}
+                            </button>
                         </div>
                     </form>
                 </main>
