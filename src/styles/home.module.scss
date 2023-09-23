@@ -5,7 +5,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     @include flexbox(space-between, center);
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         padding: 4.28rem 1rem 2.142rem 1rem;
     }
 }
@@ -56,7 +56,7 @@
 .home__main_section[data-index=one] {
     padding: 2.2rem 0 0 9.14rem;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         padding: 2.2rem 0 0 1rem;
     }
 }
@@ -65,7 +65,7 @@
     font-size: 2.57rem;
     font-family: $font-montserrat-bold;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         font-size: 1.14rem;
     }
 }
@@ -75,7 +75,7 @@
     flex-direction: column;
     padding-right: 3.92rem;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         padding: 0;
         justify-content: center;
         width: 100%;
@@ -94,7 +94,7 @@
     width: var(--width);
     height: var(--height);
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         width: 100%;
         height: auto;
     }
@@ -104,7 +104,7 @@
     @include flexbox(center, flex-start);
     margin-top: 1.92rem;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         flex-direction: column;
     }
 }
@@ -114,7 +114,7 @@
     font-family: $font-clash-display-bold;
     line-height: normal;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         font-size: 2.28rem;
         text-align: center;
     }
@@ -126,7 +126,7 @@
     color: white;
     line-height: 166%;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         font-size: 0.92rem;
         text-align: center;
     }
@@ -135,7 +135,7 @@
 .home__main__overviewButtonWrapper {
     margin-top: 2.12rem;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         @include flexbox(center, center);
     }
 }
@@ -144,7 +144,7 @@
     min-width: fit-content;
     margin-top: 6rem;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         margin: 1.5rem auto 1rem auto;
     }
 }
@@ -164,7 +164,7 @@
         font-size: 1rem;
     }
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         @include flexbox(center, flex-start);
         gap: 1rem;
     }
@@ -176,7 +176,7 @@
     padding: 4.28rem 9.14rem 2.142rem 9.14rem;
 
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         flex-direction: column;
         padding: 4.28rem 1rem 2.142rem 1rem !important;
     }
@@ -185,14 +185,14 @@
 .home__main__overviewItem[data-reversed] {
     flex-direction: row-reverse;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         flex-direction: column;
     }
 }
 
 .home__main__overviewItem[data-reversed=mobile-column-reverse] {
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         flex-direction: column-reverse;
     }
 }
@@ -208,7 +208,7 @@
         font-family: inherit;
     }
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         font-size: 1.42rem;
         text-align: center;
     }
@@ -218,7 +218,7 @@
     font-size: 1rem;
     line-height: 1.96rem;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         font-size: 0.92rem;
         text-align: center;
     }
@@ -230,7 +230,7 @@
 
 .home__main__overviewItem_ilstr {
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
 
         img {
             width: 100% !important;

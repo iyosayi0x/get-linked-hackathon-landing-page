@@ -72,9 +72,30 @@ const Header = ({ showBorder }: { showBorder?: boolean }) => {
                 </header>
             </div>
 
-            <div className="mobile-only">
-                <header className={`${styles.home__header_mobile}`}></header>
-            </div>
+            {location.pathname === '/register' && (
+                <div className="mobile-only">
+                    <header className={`${styles.home__header_mobile}`}>
+                        Register
+                    </header>
+                </div>
+            )}
+
+            {location.pathname === '/contact' && (
+                <div className="mobile-only">
+                    <header
+                        className={`${styles.home__header_mobile}`}
+                    ></header>
+                </div>
+            )}
+
+            {location.pathname !== '/register' &&
+                location.pathname !== '/contact' && (
+                    <div className="mobile-only">
+                        <header
+                            className={`${styles.home__header_mobile}`}
+                        ></header>
+                    </div>
+                )}
         </>
     );
 };

@@ -17,7 +17,7 @@
 .prizes__flexWrapper {
     @include flexbox(center, center);
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         flex-direction: column;
     }
 }
@@ -27,7 +27,7 @@
         width: 39.14rem;
         height: 34.42rem;
 
-        @media screen and (max-width:1000px) {
+        @media screen and (max-width:1100px) {
             width: 100%;
             height: auto;
         }
@@ -37,7 +37,7 @@
 .prizes__headerWrapper {
     margin-left: 52%;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         margin-left: 0;
     }
 }
@@ -51,7 +51,7 @@
         font-family: inherit;
     }
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         font-size: 1.42rem;
         text-align: center;
     }
@@ -61,7 +61,7 @@
     font-size: 1.14rem;
     margin-top: 1.14rem;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         font-size: 0.85rem;
         text-align: center;
     }
@@ -72,7 +72,7 @@
     font-size: 2.28rem;
     font-family: $font-montserrat-bold;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         font-size: 1rem !important;
     }
 }
@@ -98,7 +98,7 @@
         color: $primary-color;
     }
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         img {
             width: 5.42rem;
             height: 5.45rem;
@@ -109,7 +109,7 @@
         width: unset;
     }
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         margin-top: 7rem;
     }
 }
@@ -125,7 +125,7 @@
         height: 21.14rem;
         margin-top: -70%;
 
-        @media screen and (max-width:1000px) {
+        @media screen and (max-width:1100px) {
             width: 8.97rem;
             height: 8.97rem;
             margin-top: -50%;
@@ -141,7 +141,7 @@
     @include flexbox(flex-start, center);
     gap: 2.14rem;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         gap: 1rem;
         max-width: 100vw;
         overflow-x: auto;
@@ -164,7 +164,7 @@
         margin-top: -1.14rem;
     }
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         &>div:first-child {
             font-size: 1rem;
         }

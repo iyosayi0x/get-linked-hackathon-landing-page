@@ -9,8 +9,10 @@ import IconFacebook from 'src/assets/icons/facebook';
 import IconLinkedIn from 'src/assets/icons/linkedin';
 import { BaseSyntheticEvent, useState } from 'react';
 import { handleContact } from 'src/adapters/contact';
+import ContactSuccess from 'src/assets/components/modals/ContactSuccess';
 
 const Contact = () => {
+    const [visible, setIsVisible] = useState(true)
     const [isLoading, setIsLoading] = useState(false);
     const [form, setForm] = useState<ContactFormArguments>({
         first_name: '',
@@ -38,13 +40,25 @@ const Contact = () => {
         try {
             setIsLoading(true);
             await handleContact(form);
+            setIsVisible(true)
         } catch (err) {
             // do something
         } finally {
             setIsLoading(false);
         }
     };
+
+    const resetClose=()=>{ 
+        setIsVisible(false)
+        setForm({ 
+            first_name: '',
+            email: '',
+            message: '',
+            phone_number: '',
+        })
+    }
     return (
+        <> 
         <div>
             <Header showBorder={false} />
 
@@ -123,9 +137,8 @@ const Contact = () => {
                     </div>
 
                     <div className={formStyles.form__field}>
-                        <input
-                            className={formStyles.form__input}
-                            type="text"
+                        <textarea
+                            className={formStyles.form__textarea}
                             placeholder="Message"
                             name="message"
                             onChange={handleFormChange}
@@ -141,6 +154,9 @@ const Contact = () => {
                 </form>
             </main>
         </div>
+
+        <ContactSuccess {...{visible, onClose:resetClose}}/>
+        </>
     );
 };
 

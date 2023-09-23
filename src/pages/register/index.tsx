@@ -4,7 +4,7 @@ import styles from 'src/styles/register.module.scss';
 import formStyles from 'src/styles/form.module.scss';
 
 import images from 'src/assets/images';
-import Success from 'src/assets/components/modals/Success';
+import Success from 'src/assets/components/modals/RegisterSuccess';
 import {
     BaseSyntheticEvent,
     useEffect,
@@ -16,8 +16,8 @@ import ChevronDown from 'src/assets/icons/chevron-down';
 import { handleFetchCategoryList, handleRegister } from 'src/adapters/register';
 
 const Register = () => {
-    const [visible] = useState(false);
-    const resetClose = () => {};
+    const [visible, setIsVisible] = useState(false);
+
     const [categories, setCategories] = useState<Category[]>([]);
     const groupSizes = useMemo(() => {
         return Array.from(Array(11).keys()).slice(1);
@@ -51,6 +51,22 @@ const Register = () => {
         });
     }, []);
 
+    const resetClose = () => {
+        setIsVisible(false);
+        setForm({
+            team_name: '',
+            phone_number: '',
+            email: '',
+            project_topic: '',
+            category: {
+                name: '',
+                id: 0,
+            },
+            group_size: 0,
+            privacy_poclicy_accepted: false,
+        })
+    };
+
     const handleSubmit = async (e: BaseSyntheticEvent) => {
         e.preventDefault();
         if (
@@ -66,6 +82,7 @@ const Register = () => {
         try {
             setIsLoading(true);
             await handleRegister({ ...form, category: form.category.id });
+            setIsVisible(true)
         } catch (err) {
             /// do something
         } finally {
@@ -130,7 +147,7 @@ const Register = () => {
                                     className={formStyles.form__input}
                                     type="text"
                                     placeholder="Enter your phone number"
-                                    name="phone"
+                                    name="phone_number"
                                     value={form.phone_number}
                                     onChange={handleFormChange}
                                 />

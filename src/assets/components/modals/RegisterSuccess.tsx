@@ -7,7 +7,7 @@ interface IProps {
     visible: boolean;
     onClose: () => void;
 }
-const Success = (props: IProps) => {
+const RegisterSuccess = (props: IProps) => {
     return (
         <Modal {...props}>
             <img src={images.congrats} alt="congratulations" />
@@ -21,10 +21,10 @@ const Success = (props: IProps) => {
             </div>
 
             <div className={styles.modal__button}>
-                <button>Back</button>
+                <button onClick={props.onClose}>Back</button>
             </div>
         </Modal>
     );
 };
 
-export default Success;
+export default RegisterSuccess;

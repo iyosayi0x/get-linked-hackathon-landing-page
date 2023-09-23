@@ -4,7 +4,7 @@
     padding: 5.14rem 0 17rem 0;
     min-height: fit-content;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         padding: 4rem 0 5rem 1rem;
     }
 }
@@ -19,7 +19,7 @@
     margin-top: 0.85rem;
     line-height: 1.72rem;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         margin-top: 0.85rem;
     }
 }
@@ -28,7 +28,7 @@
     font-size: 2.28rem;
     font-family: $font-clash-display-bold;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         font-size: 1.42rem;
     }
 }
@@ -37,7 +37,7 @@
     margin-top: 6.5rem;
     flex-direction: column;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         margin-top: 2rem;
     }
 }
@@ -68,7 +68,7 @@
     }
 
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         &::before {
             right: unset;
             left: -0.69rem;
@@ -108,7 +108,7 @@
     color: $primary-color;
     max-width: 40rem;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         font-size: 0.85rem;
     }
 }
@@ -120,7 +120,7 @@
     margin-top: 0.85rem;
     font-size: 1.142rem;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         font-size: 0.85rem;
     }
 
@@ -131,12 +131,12 @@
     color: $primary-color;
     font-family: $font-montserrat-bold;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1100px) {
         font-size: 0.85rem;
     }
 }
 
-@media screen and (min-width:1000px) {
+@media screen and (min-width:1100px) {
     .timeline__timeline_date {
         position: absolute;
         bottom: -4rem;
