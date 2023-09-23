@@ -85,15 +85,28 @@
     }
 }
 
+.modal__ilstr {
+    max-width: 100%;
+    height: auto;
+}
+
 .modal__info {
     font-size: 2.28rem;
     font-family: $font-montserrat-semibold;
     text-align: center;
+
+    @media screen and (max-width:1000px) {
+        font-size: 1.14rem;
+    }
 }
 
 .modal__desc {
     text-align: center;
     margin-top: 1.05rem;
+
+    @media screen and (max-width:1000px) {
+        font-size: 0.85rem;
+    }
 }
 
 .modal__button {

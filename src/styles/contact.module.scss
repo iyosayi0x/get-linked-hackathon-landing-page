@@ -1,11 +1,20 @@
 @import './lib';
 
+.contact__container {
+    max-width: 99vw;
+}
 
 .contact__main {
     margin-top: 8rem;
     @include flexbox(center, flex-start);
     gap: 16.6rem;
     padding-bottom: 10rem;
+
+    @media screen and (max-width:1000px) {
+        flex-direction: column-reverse;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
 }
 
 .contact__form {
@@ -17,7 +26,8 @@
     width: 100%;
 
     @media screen and (max-width:1100px) {
-        padding: 5.35rem 1rem;
+        padding: 1.5rem 1rem;
+        background: none;
     }
 }
 
@@ -29,6 +39,11 @@
 
     div {
         font-family: inherit;
+    }
+
+    @media screen and (max-width:1000px) {
+        font-size: 1.42rem;
+        max-width: 70%;
     }
 }
 
@@ -47,16 +62,40 @@
         font-size: 1.14rem;
         color: white;
     }
+
+    @media screen and (max-width:1000px) {
+        width: 100%;
+    }
 }
 
 .contact__share {
     &>div:first-child {
         margin-bottom: 1.142rem;
         color: $primary-color;
+        text-align: center;
     }
 
     &>div:last-child {
         @include flexbox(flex-start, center);
         gap: 1.35rem;
+    }
+
+    @media screen and (max-width:1000px) {
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+}
+
+.contact__desc {
+    color: white;
+    font-size: 0.85rem;
+    font-family: $font-montserrat-regular !important;
+    display: none;
+    max-width: 80%;
+    margin: 1.4rem 0;
+
+    @media screen and (max-width:1000px) {
+        display: block;
     }
 }

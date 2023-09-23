@@ -188,8 +188,8 @@ const Register = () => {
                             </div>
                         </div>
 
-                        <div className={formStyles.form__dualFormField}>
-                            <div>
+                        <div className={formStyles.form__dualFormField} data-no-block>
+                            <div style={{flex:.7}}>
                                 <div className={formStyles.form__labelWrapper}>
                                     <label className={formStyles.form__label}>
                                         Category
@@ -242,7 +242,7 @@ const Register = () => {
                                 </div>
                             </div>
 
-                            <div>
+                            <div style={{flex:.3}}>
                                 <div className={formStyles.form__labelWrapper}>
                                     <label className={formStyles.form__label}>
                                         Group Size

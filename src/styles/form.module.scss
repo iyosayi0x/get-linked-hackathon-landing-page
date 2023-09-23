@@ -10,6 +10,10 @@
     outline: none;
     font-family: $font-montserrat-regular;
     font-size: 1.14rem;
+
+    @media screen and (max-width:1000px) {
+        font-size: 1rem;
+    }
 }
 
 .form__textarea {
@@ -31,10 +35,29 @@
     &>div {
         flex: .5;
     }
+
+    @media screen and (max-width:1000px) {
+        flex-direction: column;
+
+        &>div {
+            width: 100%;
+        }
+
+        &[data-no-block] {
+            @include flexbox(space-between, center);
+            flex-direction: row;
+            gap: 1.46rem;
+
+        }
+    }
 }
 
 .form__labelWrapper {
     margin-bottom: 0.81rem;
+
+    @media screen and (max-width:1000px) {
+        font-size: .92rem;
+    }
 }
 
 .form__inputWithIcon {

@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 
 import styles from 'src/styles/home.module.scss';
+import ArrowBack from '../icons/arrow-back';
 
 const Header = ({ showBorder }: { showBorder?: boolean }) => {
     const location = useLocation();
@@ -74,7 +75,7 @@ const Header = ({ showBorder }: { showBorder?: boolean }) => {
 
             {location.pathname === '/register' && (
                 <div className="mobile-only">
-                    <header className={`${styles.home__header_mobile}`}>
+                    <header className={`${styles.home__header_register_mobile}`}>
                         Register
                     </header>
                 </div>
@@ -83,8 +84,13 @@ const Header = ({ showBorder }: { showBorder?: boolean }) => {
             {location.pathname === '/contact' && (
                 <div className="mobile-only">
                     <header
-                        className={`${styles.home__header_mobile}`}
-                    ></header>
+                        className={`${styles.home__header_contact_mobile}`}
+                    >
+                        <Link to='/'>
+                       <ArrowBack/>
+                        </Link>
+                      
+                    </header>
                 </div>
             )}
 

@@ -59,26 +59,26 @@ const Contact = () => {
     }
     return (
         <> 
-        <div>
+        <div className={styles.contact__container}>
             <Header showBorder={false} />
 
             <main className={styles.contact__main}>
                 <aside className={styles.contact__aside}>
-                    <div>Get in touch</div>
-                    <div>
+                    <div className="desktop-only">Get in touch</div>
+                    <div className="desktop-only">
                         Contact
                         <br /> Information
                     </div>
 
-                    <div>
+                    <div className="desktop-only">
                         27,Alara Street
                         <br /> Yaba 100012
                         <br /> Lagos State
                     </div>
 
-                    <div>Call Us : 07067981819</div>
+                    <div className="desktop-only">Call Us : 07067981819</div>
 
-                    <div>
+                    <div className="desktop-only" >
                         we are open from Monday-Friday
                         <br /> 08:00am - 05:00pm
                     </div>
@@ -101,6 +101,10 @@ const Contact = () => {
                     <section className={styles.contact__form_header}>
                         <div>Questions or need assistance?</div>
                         <div>Let us know about it!</div>
+                        <div className={styles.contact__desc}> 
+                        Email us below to any question related 
+to our event
+                        </div>
                     </section>
 
                     <div className={formStyles.form__field}>

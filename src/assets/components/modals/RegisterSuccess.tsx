@@ -10,7 +10,7 @@ interface IProps {
 const RegisterSuccess = (props: IProps) => {
     return (
         <Modal {...props}>
-            <img src={images.congrats} alt="congratulations" />
+            <img src={images.congrats} alt="congratulations"  className={styles.modal__ilstr}/>
             <div className={styles.modal__info}>
                 Congratulations
                 <br /> you have successfully Registered!

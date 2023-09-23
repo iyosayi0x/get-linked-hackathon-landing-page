@@ -50,7 +50,6 @@
 
 .home__main_section {
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-    overflow-x: hidden;
 }
 
 .home__main_section[data-index=one] {
@@ -236,5 +235,24 @@
             width: 100% !important;
             height: auto !important;
         }
+    }
+}
+
+
+// header 
+
+.home__header_register_mobile {
+    font-size: 1.14rem;
+    font-family: $font-clash-display-bold;
+    color: $primary-color;
+    padding: 1.71rem 0 0 4.28rem;
+}
+
+.home__header_contact_mobile {
+    padding: 3.5rem 1rem 1rem 1rem;
+
+    svg {
+        width: 3rem;
+        height: 3rem;
     }
 }
