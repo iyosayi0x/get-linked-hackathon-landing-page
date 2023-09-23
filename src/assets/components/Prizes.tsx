@@ -25,10 +25,7 @@ const Prizes = () => {
     }, []);
     return (
         <div className={styles.prizes}>
-            <div className={styles.prizes__awardWrapper}>
-                <img src={images.award} alt="award" />
-            </div>
-            <div>
+            <div className={styles.prizes__headerWrapper}> 
                 <div className={styles.prizes__header}>
                     <div> Prizes and</div>
                     <div data-color="primary">Rewards</div>
@@ -38,35 +35,48 @@ const Prizes = () => {
                     Highlight of the prizes or rewards for winners and <br />
                     for participants.
                 </div>
+            </div>
 
-                <div className={styles.prizes__prizes}>
-                    {prizesMapping.map((prize, index) => {
-                        return (
-                            <div
-                                className={styles.prizes__prize}
-                                key={index}
-                                data-large={index === 1 ? '' : undefined}
-                            >
-                                <img src={prize.image} alt="prize" />
+
+            <div className={styles.prizes__flexWrapper}>
+                <div className={styles.prizes__awardWrapper}>
+                    <img src={images.award} alt="award" />
+                </div>
+
+
+                    <div className={styles.prizes__prizes}>
+                        {prizesMapping.map((prize, index) => {
+                            return (
                                 <div
-                                    className={
-                                        styles.prizes__prize_titleWrapper
-                                    }
+                                    className={styles.prizes__prize}
+                                    key={index}
+                                    data-large={index === 1 ? '' : undefined}
                                 >
-                                    <div>{prize.title}</div>
+                                    <img src={prize.image} alt="prize" />
                                     <div
-                                        className={styles.prizes__prize__label}
+                                        className={
+                                            styles.prizes__prize_titleWrapper
+                                        }
                                     >
-                                        Runner
+                                        <div>{prize.title}</div>
+                                        <div
+                                            className={
+                                                styles.prizes__prize__label
+                                            }
+                                        >
+                                            Runner
+                                        </div>
+                                    </div>
+                                    <div
+                                        className={styles.prizes__prize__reward}
+                                    >
+                                        {prize.reward}
                                     </div>
                                 </div>
-                                <div className={styles.prizes__prize__reward}>
-                                    {prize.reward}
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
+                            );
+                        })}
+                    </div>
+
             </div>
         </div>
     );

@@ -5,7 +5,7 @@
     min-height: fit-content;
 
     @media screen and (max-width:1000px) {
-        padding: 4rem 0 17rem 1rem;
+        padding: 4rem 0 5rem 1rem;
     }
 }
 
@@ -14,14 +14,32 @@
     flex-direction: column;
 }
 
+.timeline__desc {
+    text-align: center;
+    margin-top: 0.85rem;
+    line-height: 1.72rem;
+
+    @media screen and (max-width:1000px) {
+        margin-top: 0.85rem;
+    }
+}
+
 .timeline__header_cta {
     font-size: 2.28rem;
     font-family: $font-clash-display-bold;
+
+    @media screen and (max-width:1000px) {
+        font-size: 1.42rem;
+    }
 }
 
 .timeline__timelines {
     margin-top: 6.5rem;
     flex-direction: column;
+
+    @media screen and (max-width:1000px) {
+        margin-top: 2rem;
+    }
 }
 
 .timeline__timeline {
@@ -57,19 +75,29 @@
             width: 1.38rem;
             height: 1.38rem;
             font-size: 0.85rem;
-            bottom: -2rem;
+            bottom: 0;
+        }
+
+        &::after {
+            content: '';
+            width: 4px;
+            height: .5rem;
+            background: $tertiary-color;
+            bottom: 1.34rem;
+            position: absolute;
+            left: -4px;
         }
 
         border-right: unset;
         border-left: 4px solid $primary-color;
         padding-left: 1rem;
 
-        min-height: fit-content;
-        margin-top: 5rem;
+        margin-top: 3rem;
         width: 100%;
 
+        min-height: unset;
+        height: fit-content;
     }
-
 
 
 }

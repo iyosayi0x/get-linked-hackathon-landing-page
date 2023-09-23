@@ -20,7 +20,7 @@ const Register = () => {
     const resetClose = () => {};
     const [categories, setCategories] = useState<Category[]>([]);
     const groupSizes = useMemo(() => {
-        return Array.from(Array(11).keys()).slice(1,);
+        return Array.from(Array(11).keys()).slice(1);
     }, []);
     const [isLoading, setIsLoading] = useState(false);
     const groupSizeRef = useRef<HTMLDivElement | null>(null);

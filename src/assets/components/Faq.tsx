@@ -18,7 +18,7 @@ const Faq = () => {
         <section
             className={styles.home__main__overviewItem}
             style={{ paddingLeft: '4.71rem', gap: '1.17rem' }}
-            data-reversed
+            data-reversed="mobile-column-reverse"
         >
             <div
                 className={styles.home__main__overviewItem_ilstr}
@@ -35,8 +35,8 @@ const Faq = () => {
                 <div
                     className={styles.home__main__overviewItem_metaData_header}
                 >
-                    <div>Frequently Ask</div>
-                    <div data-color="primary">Question</div>
+                    <div>Frequently Asked</div>
+                    <div data-color="primary">Questions</div>
                 </div>
                 <div
                     className={

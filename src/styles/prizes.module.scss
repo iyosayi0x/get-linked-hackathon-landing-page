@@ -2,13 +2,20 @@
 
 
 .prizes {
-    @include flexbox(center, center);
     background-blend-mode: color-burn;
     object-fit: cover;
     gap: 2.142rem;
     background: url('../assets/images/bg1.png'), #150E28 0px -0.093px / 100% 109.967% no-repeat;
     background-blend-mode: color-burn;
     padding: 5.28rem 0 10.64rem 0;
+
+    @media screen and (max-width: 1200px) {
+        padding: 5.28rem 0 4rem 0;
+    }
+}
+
+.prizes__flexWrapper {
+    @include flexbox(center, center);
 
     @media screen and (max-width:1000px) {
         flex-direction: column;
@@ -27,6 +34,14 @@
     }
 }
 
+.prizes__headerWrapper {
+    margin-left: 52%;
+
+    @media screen and (max-width:1000px) {
+        margin-left: 0;
+    }
+}
+
 .prizes__header {
     font-size: 2.28rem;
     font-family: $font-clash-display-bold;
@@ -35,11 +50,21 @@
     div {
         font-family: inherit;
     }
+
+    @media screen and (max-width:1000px) {
+        font-size: 1.42rem;
+        text-align: center;
+    }
 }
 
 .prizes__description {
     font-size: 1.14rem;
     margin-top: 1.14rem;
+
+    @media screen and (max-width:1000px) {
+        font-size: 0.85rem;
+        text-align: center;
+    }
 }
 
 
@@ -82,6 +107,10 @@
 
         flex: 1;
         width: unset;
+    }
+
+    @media screen and (max-width:1000px) {
+        margin-top: 7rem;
     }
 }
 

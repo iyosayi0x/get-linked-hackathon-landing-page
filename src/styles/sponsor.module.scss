@@ -10,12 +10,22 @@
 .sponsor__title {
     font-size: 2.28rem;
     font-family: $font-montserrat-bold;
+
+    @media screen and (max-width:1000px) {
+        font-size: 1.42rem;
+    }
 }
 
 .sponsor__desc {
     text-align: center;
     margin-top: 1.57rem;
     line-height: 1.96rem;
+    max-width: 32rem;
+
+    @media screen and (max-width:1000px) {
+        font-size: 0.85rem;
+        max-width: 90%;
+    }
 }
 
 .sponsor__grid {
@@ -30,7 +40,7 @@
     gap: 3rem;
 
     @media screen and (max-width:1000px) {
-        padding: 1rem 1.5rem;
+        display: none;
     }
 
     .sponsor__wrapper {
@@ -71,16 +81,5 @@
             padding-right: 3.5rem;
         }
 
-        @media screen and (max-width:1000px) {
-            img {
-                max-width: 2rem;
-                height: auto;
-            }
-
-            &:nth-child(2) {
-                padding-left: 1.5rem;
-                padding-right: 1.5rem;
-            }
-        }
     }
 }

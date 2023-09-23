@@ -1,7 +1,6 @@
 import styles from 'src/styles/security.module.scss';
 
 import images from '../images';
-import { Link } from 'react-router-dom';
 
 const Privacy = () => {
     return (
@@ -16,10 +15,12 @@ const Privacy = () => {
                     Last updated on September 12, 2023
                 </div>
 
-                <div style={{ lineHeight: '188.4%' }}>
+                <div
+                    style={{ lineHeight: '188.4%', maxWidth: '31rem' }}
+                    className={styles.security__description}
+                >
                     Below are our privacy & policy, which outline a lot of
-                    goodies.
-                    <br /> it's our aim to always take of our participant
+                    goodies. it's our aim to always take of our participant
                 </div>
 
                 <div className={styles.security__boxWrapper}>
@@ -55,9 +56,7 @@ const Privacy = () => {
                     </ul>
 
                     <div style={{ display: 'grid', placeItems: 'center' }}>
-                        <Link to="/register">
-                            <button>Register</button>
-                        </Link>
+                        <button>Read More</button>
                     </div>
                 </div>
             </section>

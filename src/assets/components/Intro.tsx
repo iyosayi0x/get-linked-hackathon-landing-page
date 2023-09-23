@@ -3,6 +3,7 @@ import styles from 'src/styles/home.module.scss';
 import images from 'src/assets/images';
 
 import Line from 'src/assets/illustration/line';
+import { Link } from 'react-router-dom';
 
 const Intro = () => {
     return (
@@ -39,7 +40,9 @@ const Intro = () => {
                     </div>
 
                     <div className={styles.home__main__overviewButtonWrapper}>
-                        <button>Register</button>
+                        <Link to='/register'>
+                            <button>Register</button>
+                        </Link>
                     </div>
 
                     <div className={styles.home__main__overviewTimer}>

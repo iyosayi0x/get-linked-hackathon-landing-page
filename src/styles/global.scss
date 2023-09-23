@@ -55,6 +55,11 @@ button {
     outline: none;
     background: linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%);
     font-size: 1.142rem;
+
+    @media screen and (max-width:1000px) {
+        font-size: 0.85rem;
+        width: 6.88rem;
+    }
 }
 
 [data-color=secondary] {

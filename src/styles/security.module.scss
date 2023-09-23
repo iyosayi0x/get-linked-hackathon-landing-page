@@ -18,11 +18,21 @@
     div {
         font-family: inherit;
     }
+
+    @media screen and (max-width:1000px) {
+        font-size: 1.42rem;
+        text-align: center;
+    }
 }
 
 .security__date {
     color: rgba(255, 255, 255, 0.75);
     margin: 1.21rem 0 2.14rem 0;
+
+    @media screen and (max-width:1000px) {
+        font-size: 0.85rem;
+        text-align: center;
+    }
 }
 
 .security__boxWrapper {
@@ -32,7 +42,10 @@
     background: rgba(217, 217, 217, 0.03);
     padding: 4.21rem 5.14rem;
     max-width: 40.64rem;
-    width: 100vw;
+
+    @media screen and (max-width:1000px) {
+        padding: 4.21rem 1rem;
+    }
 }
 
 .security__policyHeader {
@@ -41,16 +54,26 @@
     font-size: 1.14rem;
     margin: 1.71rem 0 0 0;
     line-height: 216.4%;
+
+    @media screen and (max-width:1000px) {
+        font-size: 0.92rem;
+    }
 }
 
 .security__listHeader {
     font-family: $font-montserrat-bold;
     line-height: 216.4%;
     margin-top: -0.214rem;
+
+    @media screen and (max-width:1000px) {
+        font-size: 0.85rem;
+    }
 }
 
 .security__list {
     margin-top: 1.28rem;
+
+    list-style: none;
 
     &>li {
         margin-bottom: 1.28rem;
@@ -63,6 +86,10 @@
             margin-left: -1rem;
             margin-right: 1rem;
         }
+
+        @media screen and (max-width:1000px) {
+            font-size: 0.85rem;
+        }
     }
 }
 
@@ -71,5 +98,13 @@
         img {
             width: 100%;
         }
+    }
+}
+
+.security__description {
+    @media screen and (max-width:1000px) {
+        text-align: center;
+        font-size: 0.85rem;
+        max-width: unset;
     }
 }

@@ -7,7 +7,6 @@ const Sponsors = () => {
             <div className={styles.sponsor__title}>Partners and Sponsors</div>
             <div className={styles.sponsor__desc}>
                 Getlinked Hackathon 1.0 is honored to have the following major
-                <br />
                 companies as its partners and sponsors
             </div>
 

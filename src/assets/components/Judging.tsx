@@ -133,7 +133,18 @@ const Judging = () => {
                     competition-specific requirements.
                 </div>
 
-                <div style={{ marginTop: '3.92rem' }}>
+                <div style={{ marginTop: '3.92rem' }} className="desktop-only">
+                    <button>Read More</button>
+                </div>
+
+                <div
+                    style={{
+                        marginTop: '3.92rem',
+                        display: 'grid',
+                        placeItems: 'center',
+                    }}
+                    className="mobile-only"
+                >
                     <button>Read More</button>
                 </div>
             </div>

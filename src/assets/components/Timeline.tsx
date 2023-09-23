@@ -44,11 +44,7 @@ const Timeline = () => {
                     Timeline
                 </div>
                 <div
-                    style={{
-                        textAlign: 'center',
-                        marginTop: '0.85rem',
-                        lineHeight: '1.72rem',
-                    }}
+                    className={timelineStyles.timeline__desc}
                 >
                     Here is the breakdown of the time we anticipate <br />
                     using for the upcoming event.
