@@ -6,6 +6,6 @@ export const handleContact = async (args: ContactFormArguments) => {
         url: '/contact-form',
         data: args,
     });
-    const data: ContactFormData[] = await res.data();
+    const data: ContactFormData[] = await res.data;
     return data;
 };

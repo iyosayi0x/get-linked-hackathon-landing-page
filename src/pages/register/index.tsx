@@ -20,7 +20,7 @@ const Register = () => {
     const resetClose = () => {};
     const [categories, setCategories] = useState<Category[]>([]);
     const groupSizes = useMemo(() => {
-        return Array.from(Array(11).keys());
+        return Array.from(Array(11).keys()).slice(1,);
     }, []);
     const [isLoading, setIsLoading] = useState(false);
     const groupSizeRef = useRef<HTMLDivElement | null>(null);
@@ -201,6 +201,7 @@ const Register = () => {
                                             formStyles.form__dropdownWrapper
                                         }
                                         tabIndex={0}
+                                        ref={categoryRef}
                                     >
                                         {categories.map((category) => (
                                             <div

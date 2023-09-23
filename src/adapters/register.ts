@@ -5,7 +5,7 @@ export const handleFetchCategoryList = async () => {
         method: 'GET',
         url: '/categories-list',
     });
-    const data: Category[] = await res.data();
+    const data: Category[] = await res.data;
     return data;
 };
 
@@ -16,6 +16,6 @@ export const handleRegister = async (args: RegisterArguments) => {
         data: args,
     });
 
-    const data: RegisterData = await res.data();
+    const data: RegisterData = await res.data;
     return data;
 };

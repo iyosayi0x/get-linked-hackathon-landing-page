@@ -135,7 +135,7 @@ const Contact = () => {
 
                     <div style={{ display: 'grid', placeItems: 'center' }}>
                         <button>
-                            {isLoading ? 'Submitting...' : 'Loading...'}
+                            {isLoading ? 'Submitting...' : 'Submit'}
                         </button>
                     </div>
                 </form>
