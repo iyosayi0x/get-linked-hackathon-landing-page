@@ -5,11 +5,61 @@ import formStyles from 'src/styles/form.module.scss';
 
 import images from 'src/assets/images';
 import Success from 'src/assets/components/modals/Success';
-import { useState } from 'react';
+import { BaseSyntheticEvent, useEffect, useMemo, useState } from 'react';
+import ChevronDown from 'src/assets/icons/chevron-down';
+import { handleFetchCategoryList, handleRegister } from 'src/adapters/register';
 
 const Register = () => {
     const [visible] = useState(false);
     const resetClose = () => {};
+    const [categories, setCategories] = useState<Category[]>([]);
+    const groupSizes = useMemo(() => {
+        return Array.from(Array(11).keys());
+    }, []);
+    const [isLoading, setIsLoading] = useState(false);
+
+    const [form, setForm] = useState<RegisterArguments>({
+        team_name: '',
+        phone_number: '',
+        email: '',
+        project_topic: '',
+        category: 0,
+        group_size: 0,
+        privacy_poclicy_accepted: false,
+    });
+
+    const handleFormChange = (e: BaseSyntheticEvent) => {
+        setForm({ ...form, [e.target.name]: e.target.value });
+    };
+
+    useEffect(() => {
+        handleFetchCategoryList().then((data) => {
+            setCategories(data);
+        });
+    }, []);
+
+    const handleSubmit = async (e: BaseSyntheticEvent) => {
+        e.preventDefault();
+        if (
+            !form.category ||
+            !form.team_name ||
+            !form.email ||
+            !form.phone_number ||
+            !form.project_topic ||
+            form.category === 0 ||
+            form.group_size === 0
+        )
+            return;
+        try {
+            setIsLoading(true);
+            await handleRegister(form);
+        } catch (err) {
+            /// do something
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
     return (
         <>
             <div>
@@ -19,7 +69,10 @@ const Register = () => {
                     <aside className={styles.register__aside}>
                         <img src={images.gdesigner} alt="graphics designer" />
                     </aside>
-                    <form className={styles.register__form}>
+                    <form
+                        className={styles.register__form}
+                        onSubmit={handleSubmit}
+                    >
                         <section>
                             <div className={styles.register__formName}>
                                 Register
@@ -48,6 +101,9 @@ const Register = () => {
                                     className={formStyles.form__input}
                                     type="text"
                                     placeholder="Enter the name of your group"
+                                    name="team_name"
+                                    value={form.team_name}
+                                    onChange={handleFormChange}
                                 />
                             </div>
 
@@ -61,6 +117,9 @@ const Register = () => {
                                     className={formStyles.form__input}
                                     type="text"
                                     placeholder="Enter your phone number"
+                                    name="phone"
+                                    value={form.phone_number}
+                                    onChange={handleFormChange}
                                 />
                             </div>
                         </div>
@@ -76,11 +135,14 @@ const Register = () => {
                                     className={formStyles.form__input}
                                     type="text"
                                     placeholder="Enter your email address"
+                                    name="email"
+                                    value={form.email}
+                                    onChange={handleFormChange}
                                 />
                             </div>
 
                             <div>
-                                <div>
+                                <div className={formStyles.form__labelWrapper}>
                                     <label className={formStyles.form__label}>
                                         Project Topic
                                     </label>
@@ -89,6 +151,9 @@ const Register = () => {
                                     className={formStyles.form__input}
                                     type="text"
                                     placeholder="What is your group project topic"
+                                    name="project_topic"
+                                    value={form.project_topic}
+                                    onChange={handleFormChange}
                                 />
                             </div>
                         </div>
@@ -100,11 +165,42 @@ const Register = () => {
                                         Category
                                     </label>
                                 </div>
-                                <input
-                                    className={formStyles.form__input}
-                                    type="text"
-                                    placeholder="Name"
-                                />
+                                <div
+                                    className={formStyles.form__inputWithIcon}
+                                    tabIndex={0}
+                                >
+                                    <input
+                                        className={formStyles.form__input}
+                                        type="text"
+                                        placeholder="category"
+                                        readOnly={true}
+                                        value={
+                                            form.category ||
+                                            'Select your category'
+                                        }
+                                    />
+                                    <ChevronDown />
+
+                                    {/* ---- drop down ----  */}
+                                    <div
+                                        className={
+                                            formStyles.form__dropdownWrapper
+                                        }
+                                        tabIndex={0}
+                                    >
+                                        {categories.map((category) => (
+                                            <div
+                                                key={category.id}
+                                                className={
+                                                    formStyles.form__dropdownItem
+                                                }
+                                            >
+                                                {' '}
+                                                {category.name}{' '}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
 
                             <div>
@@ -113,11 +209,36 @@ const Register = () => {
                                         Group Size
                                     </label>
                                 </div>
-                                <input
-                                    className={formStyles.form__input}
-                                    type="text"
-                                    placeholder="Name"
-                                />
+                                <div className={formStyles.form__inputWithIcon}>
+                                    <input
+                                        className={formStyles.form__input}
+                                        type="text"
+                                        placeholder="group size"
+                                        readOnly={true}
+                                        value={form.group_size || 'Select'}
+                                    />
+                                    <ChevronDown />
+
+                                    {/* ---- drop down ----  */}
+                                    <div
+                                        className={
+                                            formStyles.form__dropdownWrapper
+                                        }
+                                        tabIndex={0}
+                                    >
+                                        {groupSizes.map((groupSize) => (
+                                            <div
+                                                key={groupSize}
+                                                className={
+                                                    formStyles.form__dropdownItem
+                                                }
+                                            >
+                                                {' '}
+                                                {groupSize}{' '}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -130,6 +251,13 @@ const Register = () => {
                                 <input
                                     type="checkbox"
                                     className={styles.register__consentAgree}
+                                    onChange={(e) => {
+                                        setForm((currForm) => ({
+                                            ...currForm,
+                                            privacy_poclicy_accepted:
+                                                e.target.checked,
+                                        }));
+                                    }}
                                 />{' '}
                                 <span>
                                     I agreed with the event terms and conditions
@@ -139,7 +267,7 @@ const Register = () => {
                         </div>
 
                         <div style={{ display: 'grid', placeItems: 'center' }}>
-                            <button>Register Now</button>
+                            <button>{isLoading ? 'Loading...' : "Register Now"}</button>
                         </div>
                     </form>
                 </main>

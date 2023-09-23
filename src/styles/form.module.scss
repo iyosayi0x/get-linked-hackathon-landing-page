@@ -30,3 +30,64 @@
 .form__labelWrapper {
     margin-bottom: 0.81rem;
 }
+
+.form__inputWithIcon {
+    @include flexbox(space-between, center);
+    @extend .form__input;
+    padding: 0 .7rem 0 0;
+    cursor: pointer;
+    position: relative;
+
+    input {
+        border: none;
+        height: 100%;
+        cursor: pointer;
+    }
+
+}
+
+.form__dropdownWrapper {
+    position: absolute;
+    min-height: 10rem;
+    width: 100%;
+    top: calc(100% + 1rem);
+    background: white;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: .5rem;
+    display: none;
+    @include fadeBounceInAnimation;
+    max-height: 15rem;
+    overflow-y: auto;
+
+    /* Style the scrollbar track */
+    &::-webkit-scrollbar {
+        width: 0;
+        /* Width of the scrollbar */
+    }
+
+    /* Style the scrollbar thumb (the draggable part) */
+    &::-webkit-scrollbar-thumb {
+        background-color: #888;
+        /* Color of the thumb */
+        border-radius: 5px;
+        /* Rounded corners for the thumb */
+    }
+
+    /* Style the scrollbar track when the mouse is over it */
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+    }
+
+}
+
+.form__dropdownItem {
+    color: black;
+    padding: .5rem 1.5rem;
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+.form__inputWithIcon:focus-within {
+    .form__dropdownWrapper {
+        display: block;
+    }
+}

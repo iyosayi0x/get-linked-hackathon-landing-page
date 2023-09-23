@@ -84,3 +84,28 @@ $tertiary-color: #150E28;
     justify-content: $Justify-content;
     align-items: $align-items;
 }
+
+@mixin fadeBounceInAnimation($duration: 0.8s) {
+    @keyframes fadeBounceIn {
+        0% {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+
+        60% {
+            opacity: 1;
+            transform: translateY(10px);
+        }
+
+        80% {
+            transform: translateY(-5px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    animation: fadeBounceIn $duration ease-in-out 1 forwards;
+}
